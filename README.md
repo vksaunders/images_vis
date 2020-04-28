@@ -29,7 +29,7 @@ for x0, y0, image in zip(x, y,images):
     ax.add_artist(ab)
 ```
 
-<img width="750" alt="DC_NC" src="https://user-images.githubusercontent.com/30129746/80531445-a9682400-8968-11ea-8988-eb0711751943.PNG">
+<img width="800" alt="DC_NC" src="https://user-images.githubusercontent.com/30129746/80531445-a9682400-8968-11ea-8988-eb0711751943.PNG">
 Plotting jpegs for two collections by hue (x) and saturation (y)
 
 # Header 1
