@@ -22,10 +22,8 @@ for p in paths:
     foo = foo.resize((int(foo.size[0]/20) , 
     int(foo.size[1]/20)),Image.ANTIALIAS) 
     images.append( foo )
-
 fig, ax = plt.subplots()
 ax.scatter(x, y)
-
 for x0, y0, image in zip(x, y,images):
     ab = AnnotationBbox( OffsetImage(image)  , (x0, y0), frameon=False) 
     ax.add_artist(ab)
