@@ -31,7 +31,7 @@ for x0, y0, image in zip(x, y,images):
     ax.add_artist(ab)
 ```
 
-![Image](https://user-images.githubusercontent.com/30129746/80529815-0dd5b400-8966-11ea-9aed-8dd4f392115a.png)
+![bright_sat_DC](https://user-images.githubusercontent.com/30129746/80530081-7e7cd080-8966-11ea-9154-33cc3da51404.png)
 # Header 1
 ## Header 2
 ### Header 3
