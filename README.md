@@ -19,7 +19,8 @@ def absoluteFilePaths(directory):
 images = []
 for p in paths:
     foo = Image.open( p )
-    foo = foo.resize((int(foo.size[0]/20) , int(foo.size[1]/20)),Image.ANTIALIAS) 
+    foo = foo.resize((int(foo.size[0]/20) , 
+    int(foo.size[1]/20)),Image.ANTIALIAS) 
     images.append( foo )
 
 fig, ax = plt.subplots()
