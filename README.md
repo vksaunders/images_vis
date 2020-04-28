@@ -6,13 +6,31 @@ Digital photographic images are embedded with technical data that can be sorted,
 
 This project explores some of the ways to analyze a collection of images using Python, Imageplot, Excel, and Tableau. Filtering a commercial stock library by photographer, six collections are analyzed and compared using different metrics.
 
-### Markdown
+### Plotting Jpeg Images
+#### Jpegs for Points: Brightness and Saturation Scatter Plot
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Spreadsheet data and database data without thumbnail reference, can be limiting for creative directors who wish to understand their collections visually by directly seeing the image mapped to its numeric value sets. This Python script substitutes jpegs for points in a scatter graph. Using [ImageJ](https://imagej.net/Welcome) and ImagePlot from [Software Studies Initiative](http://lab.softwarestudies.com/), attributes of brightness, saturation, and hue for picture collections were measured and recorded in CSV files. Then Python is used to plot the jpegs according to any measures chosen. 
 
 ```markdown
-Syntax highlighted code block
+def absoluteFilePaths(directory):
+   for dirpath,_,filenames in os.walk(directory):
+       for f in filenames:
+           yield os.path.abspath(os.path.join(dirpath, f))
+images = []
+for p in paths:
+    foo = Image.open( p )
+    foo = foo.resize((int(foo.size[0]/20) , int(foo.size[1]/20)),Image.ANTIALIAS) 
+    images.append( foo )
 
+fig, ax = plt.subplots()
+ax.scatter(x, y)
+
+for x0, y0, image in zip(x, y,images):
+    ab = AnnotationBbox( OffsetImage(image)  , (x0, y0), frameon=False) 
+    ax.add_artist(ab)
+```
+
+[Image](\\Users\\Valerie\\Documents\\Python\\image_plots\\screen_shots\\bright_sat_DC.png)
 # Header 1
 ## Header 2
 ### Header 3
