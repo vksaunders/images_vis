@@ -1,5 +1,5 @@
-## Data Visualization for Visual Content
-&nbsp  
+## Data Visualization for Visual Content  
+
 
 Visualizing data for visual assets, like photographs, introduces interesting challenges. Many visual properties of photography cannot necessarily be mapped to standard visualization methods, particularly when working with large image libraries.
 
@@ -8,10 +8,10 @@ Digital photographic images are embedded with technical data that can be sorted,
 This project explores some of the ways to analyze a collection of images using Python, Imageplot, Excel, and Tableau. Filtering a commercial stock library by photographer, six collections are analyzed and compared using different metrics.
 
 
-## Plotting Jpeg Images
-&nbsp  
-### Jpegs for Points: Brightness and Saturation Scatter Plot
-&nbsp  
+## Plotting Jpeg Images  
+ 
+### Jpegs for Points: Brightness and Saturation Scatter Plot  
+ 
 Spreadsheet data and database data without thumbnail reference, can be limiting for creative directors who wish to understand their collections visually by directly seeing the image mapped to its numeric value sets. This Python script substitutes jpegs for points in a scatter graph. Using [ImageJ](https://imagej.net/Welcome) and ImagePlot from [Software Studies Initiative](http://lab.softwarestudies.com/), attributes of brightness, saturation, and hue for picture collections were measured and recorded in CSV files. Then Python is used to plot the jpegs according to any measures chosen. 
 
 ```markdown
@@ -36,10 +36,10 @@ for x0, y0, image in zip(x, y,images):
 Plotting jpegs for two collections by hue (x) and saturation (y)
 
 
-## Collection Subject Analysis
-&nbsp  
-### Interactive Ledger
-&nbsp  
+## Collection Subject Analysis  
+ 
+### Interactive Ledger  
+ 
 ```markdown
 scales = alt.selection_interval(empty='all' ,bind='scales',)
 selection = alt.selection_multi(fields=['subject', 'collection'])
