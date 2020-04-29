@@ -32,9 +32,26 @@ for x0, y0, image in zip(x, y,images):
 <img width="800" alt="DC_NC" src="https://user-images.githubusercontent.com/30129746/80531445-a9682400-8968-11ea-8988-eb0711751943.PNG">
 Plotting jpegs for two collections by hue (x) and saturation (y)
 
-# Header 1
-## Header 2
-### Header 3
+### Collection Subject Analysis
+#### Sankey Diagram to Visualize Subject Categories
+```markdown
+import plotly.graph_objects as go
+fig = go.Figure(data=[go.Sankey(
+    node = dict(
+      pad = 15,
+      thickness = 20,
+      line = dict(color = "black", width = 0.5),
+      label = ["AU", "CT", "PX", "Business", "Families","Sports", "Animals", "Scenics","Other"],
+      color = "#206fb2"),
+    link = dict(
+      source = [0,1,11,12,2,13,0,1,11,12,2,13,9,9,9,9,9,9,10,10,10], # indices correspond to labels, eg A1, A2, A2, B1, ...
+      target = [9,9,9,9,9,9,10,10,10,10,10,10,6,7,5,3,4,8,6,7,5],
+      value = [165,291,32,171,340,76,32,0,302,56,34,72,3,11,9,36,29,77,2,5,1,1,1,22]
+  ))])
+fig.update_layout(title_text="Content by Collection", font_size=10)
+```
+
+
 
 - Bulleted
 - List
