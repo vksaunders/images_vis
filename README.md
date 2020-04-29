@@ -1,5 +1,5 @@
 ## Data Visualization for Visual Content
-
+&nbsp  
 
 Visualizing data for visual assets, like photographs, introduces interesting challenges. Many visual properties of photography cannot necessarily be mapped to standard visualization methods, particularly when working with large image libraries.
 
@@ -9,9 +9,9 @@ This project explores some of the ways to analyze a collection of images using P
 
 
 ## Plotting Jpeg Images
-
+&nbsp  
 ### Jpegs for Points: Brightness and Saturation Scatter Plot
-
+&nbsp  
 Spreadsheet data and database data without thumbnail reference, can be limiting for creative directors who wish to understand their collections visually by directly seeing the image mapped to its numeric value sets. This Python script substitutes jpegs for points in a scatter graph. Using [ImageJ](https://imagej.net/Welcome) and ImagePlot from [Software Studies Initiative](http://lab.softwarestudies.com/), attributes of brightness, saturation, and hue for picture collections were measured and recorded in CSV files. Then Python is used to plot the jpegs according to any measures chosen. 
 
 ```markdown
@@ -37,9 +37,9 @@ Plotting jpegs for two collections by hue (x) and saturation (y)
 
 
 ## Collection Subject Analysis
-
+&nbsp  
 ### Interactive Ledger
-
+&nbsp  
 ```markdown
 scales = alt.selection_interval(empty='all' ,bind='scales',)
 selection = alt.selection_multi(fields=['subject', 'collection'])
@@ -75,7 +75,7 @@ scatter | legend
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.2"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
-</head>
+&nbsp  
 <body>
   <div id="scatter_ledge"></div>
   <script>
