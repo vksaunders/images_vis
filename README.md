@@ -75,7 +75,7 @@ scatter | legend
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.2"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
-&nbsp  
+
 <body>
   <div id="scatter_ledge"></div>
   <script>
