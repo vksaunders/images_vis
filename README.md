@@ -29,6 +29,34 @@ for x0, y0, image in zip(x, y,images):
 <img width="600" alt="bright_sat_DC" src="https://user-images.githubusercontent.com/30129746/80850625-ecd1c500-8bea-11ea-9f6c-19aea158bc69.png">
 Plotting jpegs for an image collection by brightness (x) and saturation (y)
 
+##  Dominant Color Analysis
+### Returning Hex Values for Image Points
+
+Identifying dominant colors in images allows the viewer to source assets that fit a desired color scheme. Collections may have a palette that resounds with a specific client, creating an opportunity to contribute to a brand or participate in a campaign. Depending on a photographer's location, techniques, and personal tastes their image colors vary. Below are six collections' dominant colors returned in grids.
+
+```markdown
+import seaborn as sns
+sns.set()
+def hex_to_rgb(hex_value):
+  h = hex_value.lstrip('#')
+  return tuple(int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+hex_colors = [
+  '#f0787e', '#f5a841', '#5ac5bc', '#ee65a3', '#f5e34b', '#640587', '#c2c36d',
+  '#2e003a', '#878587', '#d3abea', '#f2a227', '#f0db08', '#148503', '#0a6940',
+  '#043834', '#726edb', '#db6e6e', '#db6ecb', '#6edb91'
+]
+rgb_colors = list(map(hex_to_rgb, hex_colors))
+sns.palplot(rgb_colors)
+row_size = 15
+rows = [rgb_colors[i:i + row_size] for i in range(0, len(rgb_colors), row_size)]
+for row in rows:
+  sns.palplot(row)
+```
+
+<img width="600" alt="dom_color_6" src="https://user-images.githubusercontent.com/30129746/80851767-a764c600-8bf1-11ea-94b6-9955388477dc.png">
+
+
+
 ## Collection Subject Analysis  
  
 ### Interactive Ledger  
@@ -93,29 +121,6 @@ Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) al
   </script>
 </body> 
   
-##  Dominant Color Analysis
-Identifying dominant colors in images allows the viewer to source assets that fit a desired color scheme. Collections may have a palette that resounds with a specific client, creating an opportunity to contribute to a brand or participate in a campaign. Depending on a photographer's location, techniques, and personal tastes their image colors vary. Below are six collections' dominant colors returned in grids.
-
-```markdown
-import seaborn as sns
-sns.set()
-def hex_to_rgb(hex_value):
-  h = hex_value.lstrip('#')
-  return tuple(int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
-hex_colors = [
-  '#f0787e', '#f5a841', '#5ac5bc', '#ee65a3', '#f5e34b', '#640587', '#c2c36d',
-  '#2e003a', '#878587', '#d3abea', '#f2a227', '#f0db08', '#148503', '#0a6940',
-  '#043834', '#726edb', '#db6e6e', '#db6ecb', '#6edb91'
-]
-rgb_colors = list(map(hex_to_rgb, hex_colors))
-sns.palplot(rgb_colors)
-row_size = 15
-rows = [rgb_colors[i:i + row_size] for i in range(0, len(rgb_colors), row_size)]
-for row in rows:
-  sns.palplot(row)
-```
-
-<img width="600" alt="dom_color_6" src="https://user-images.githubusercontent.com/30129746/80851767-a764c600-8bf1-11ea-94b6-9955388477dc.png">
 
 
 - Bulleted
