@@ -59,10 +59,8 @@ scatter | legend
 
 ### Filtering Sales Data by Subject and Collection
 Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) allow the viewer to see the selling trends for the images. An interactive ledger gives the user options to select subsets of photographs by subject and collection. The tooltip provides information about the individual pictures on hover.
- <style>
-    .error {
-        color: red;
-    }
+<html>
+<head>
   <style>
     .error {
         color: red;
@@ -71,7 +69,7 @@ Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) al
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.0.2"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
-
+</head>
 <body>
   <div id="scatter_ledge"></div>
   <script>
@@ -93,8 +91,7 @@ Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) al
     })(vegaEmbed);
 
   </script>
-
- 
+</body> 
   
 ##  Dominant Color Analysis
 Identifying dominant colors in images allows the viewer to source assets that fit a desired color scheme. Collections may have a palette that resounds with a specific client, creating an opportunity to contribute to a brand or participate in a campaign. Depending on a photographer's location, techniques, and personal tastes their image colors vary. Below are six collections' dominant colors returned in grids.
