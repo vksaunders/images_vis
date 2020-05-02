@@ -1,12 +1,6 @@
-## Data Visualization for Visual Content  
+## Data Visualization for Visual Assets  
 
-
-Visualizing data for visual assets, like photographs, introduces interesting challenges. Many visual properties of photography cannot necessarily be mapped to standard visualization methods, particularly when working with large image libraries.
-
-Digital photographic images are embedded with technical data that can be sorted, grouped and analyzed for patterns. Photographs also cover subject matter and have external success measures, like sale prices, that can be sorted and plotted in more traditional tables and graphs. Finding ways to “see” photographs through data and in the data provides a frontier for photographic study. This combination of quantitative and qualitative variables offers interesting options for visualizing creative content collections. Creative content professionals can use the below tools to identify trends among assets, collections, and subject-matter, based on different qualities. Grouping image assets by their physical properties, such as hue and saturation, may also provide innovative ways to present assets to viewers.
-
-This project explores some of the ways to analyze a collection of images using Python, Imageplot, Excel, and Tableau. Filtering a commercial stock library by photographer, six collections are analyzed and compared using different metrics.
-
+Digital photographs are embedded with qualitative and quantitative attributes. Creative content professionals use methods to filter and group digital images, based on different criteria, to highlight patterns or segments of large image libraries. These techniques are valuable internally to organize collections and may also provide innovative ways to share options with clients.
 
 ## Plotting Jpeg Images  
  
@@ -32,9 +26,8 @@ for x0, y0, image in zip(x, y,images):
     ax.add_artist(ab)
 ```
 
-<img width="800" alt="DC_NC" src="https://user-images.githubusercontent.com/30129746/80531445-a9682400-8968-11ea-8988-eb0711751943.PNG">
-Plotting jpegs for two collections by hue (x) and saturation (y)
-
+<img width="600" alt="bright_sat_DC" src="https://user-images.githubusercontent.com/30129746/80850625-ecd1c500-8bea-11ea-9f6c-19aea158bc69.png">
+Plotting jpegs for an image collection by brightness (x) and saturation (y)
 
 ## Collection Subject Analysis  
  
