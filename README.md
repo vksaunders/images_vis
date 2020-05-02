@@ -95,7 +95,7 @@ Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) al
     })(vegaEmbed);
 
   </script>
-
+  
 ##  Dominant Color Analysis
 ###  Identifying dominant colors in images allows the viewer to source assets that fit a desired color scheme. Collections may have a palette that resounds with a specific client, creating an opportunity to contribute to a brand or participate in a campaign. Depending on a photographer's location, techniques, and personal tastes their image colors vary. Below are six collections' dominant colors returned in grids.
 
