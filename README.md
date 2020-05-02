@@ -56,6 +56,10 @@ legend = alt.Chart(source).mark_rect().encode(
 
 scatter | legend
 ```
+
+Plotting individual assets by times sold (x-axis) and revenue earned (y-axis) allow the viewer to see the selling trends for the images. An interactive ledger gives the user options to select subsets of photographs by subject and collection. The tooltip provides informtion about the individual pictures on hover.
+
+
   <style>
     .error {
         color: red;
