@@ -30,7 +30,7 @@ for x0, y0, image in zip(x, y,images):
 Plotting jpegs for an image collection by brightness (x) and saturation (y)
 
 ##  Dominant Color Analysis
-### Returning Hex Values for Image Points
+### Grids of Dominant Colors for Separate Collections
 
 Identifying dominant colors in images allows the viewer to source assets that fit a desired color scheme. Collections may have a palette that resounds with a specific client, creating an opportunity to contribute to a brand or participate in a campaign. Depending on a photographer's location, techniques, and personal tastes their image colors vary. Below are six collections' dominant colors returned in grids.
 
@@ -55,7 +55,42 @@ for row in rows:
 
 <img width="600" alt="dom_color_6" src="https://user-images.githubusercontent.com/30129746/80851767-a764c600-8bf1-11ea-94b6-9955388477dc.png">
 
+### Returning Hex Values for Image Points
+<img width="600" alt="dom_color_hex" src="https://user-images.githubusercontent.com/30129746/80868073-2eec1c80-8c66-11ea-80ca-24d378820164.PNG">
 
+### Filtering for Subject by Hex Values with Interactive Ledgend
+```markdown
+import altair as alt
+import pandas as pd
+csv_file = "path"
+source = pd.read_csv( csv_file )
+
+subjects = ['Animals', 'Business', 'Kids', 'Lifestyle', 'Other', 'Scenic', 'Sports']
+collections = ['AU', 'CT', 'DC', 'NC', 'PX', 'SA']
+selection =alt.selection_multi(fields=['subject'])
+color = alt.condition(selection,
+                      alt.Color('dom_c:Q', scale =None, legend=None),
+                      alt.value('transparent'))
+base = alt.Chart(source, width=300, height = 300).mark_square(filled=True, size=70).encode(
+
+    x=alt.X('hue_median:Q'),
+    y='saturation_median:Q',
+    color = color, #alt.Color('dom_c', scale =None),
+    #tooltip=['filename', 'collection', 'subject','transactions', 'revenue']
+    tooltip=[alt.Tooltip('filename:N'),
+             alt.Tooltip('collection:N'),
+             alt.Tooltip('subject:N'),
+             alt.Tooltip('transactions:Q'),
+             alt.Tooltip('revenue', format="$"+'.2f')]
+    
+).interactive()
+legend = alt.Chart(source).mark_point().encode(
+    y=alt.Y('subject:N', axis=alt.Axis(orient='right')),
+    color=color
+).add_selection(
+    selection
+)
+```
 
 ## Collection Subject Analysis  
  
